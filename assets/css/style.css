@@ -2,6 +2,7 @@
     --primary-color: #0A1128;
     --white-color: #fff;
     --light-gray-color: #eeeeee;
+    --gray: #c7bebe;
     --secondary-color: crimson;
     --gap: 3rem;
 }
@@ -41,7 +42,6 @@ body {
     width: 100%;
     border-bottom: 0.1rem solid var(--light-gray-color);
     z-index: 1;
-    /* width: 100%; */
 }
 
 .menu h1 {
@@ -124,7 +124,6 @@ body {
     max-width: 100%;
     display: flex;
     text-align: center;
-    /* flex-flow: column wrap; */
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
@@ -283,7 +282,7 @@ tfoot td, thead th {
 }
 
 .form-group ::placeholder {
-    color: var(--light-gray-color);
+    color: var(--gray);
 }
 
 #footer {
@@ -297,14 +296,97 @@ tfoot td, thead th {
     font-size: 3rem;
 }
 
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--white-color);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--primary-color);
+    transform: rotate(-90deg);
+    border: 0.1rem solid var(--primary-color);
+} 
 
-/* .intro-img {
-    background-image: url(../img/javascript-main.svg);
-    height: 10rem;
-    width: 10rem;
-} */
+.close-menu {
+    display: none;
+}
 
+@media (max-width: 800px) {
+    .intro-content, .grid {
+        grid-template-columns: 1fr;
+    }
 
-/* .menu ul li a:hover {
-    border-bottom: 0.2rem solid crimson;
-} */
+    .gallery-img {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        overflow: hidden;
+    }
+
+    .grid-one-content {
+        display: block;
+    }
+
+    .gallery-img img {
+        width: 100%;
+    }
+
+    .menu {
+        bottom: 0;
+        text-align: center;
+    }
+
+    .menu-content, .menu-content ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu-content {
+        height: 100vh;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .close-menu {
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+    }
+
+    .close-menu-label::after {
+        content: '≡';
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    .close-menu:checked~.menu {
+        display: block;
+    }
+
+    .close-menu:checked~.close-menu-label::after {
+        content: '×';
+    }
+
+    .menu-spacing {
+        display: none;
+    }
+}   

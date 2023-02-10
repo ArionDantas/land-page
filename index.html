@@ -13,13 +13,15 @@
 <body>
   <div class="menu-spacing"></div>
 
+  <input id="close-menu" class="close-menu" type="checkbox" role="button" aria-label="Close menu">
+  <label class="close-menu-label" for="close-menu" title="close menu"></label>
   <aside class="menu white-bg">
     <div class="main-content menu-content">
-      <h1>
+      <h1  onclick="getElementById('close-menu').checked = false">
         <a href="#intro">LOGO</a>
       </h1>
       <nav>
-        <ul>
+        <ul onclick="getElementById('close-menu').checked = false">
           <li><a href="#top3">Top 3</a></li>
           <li><a href="#grid-one">Grid One</a></li>
           <li><a href="#gallery">Gallery</a></li>
@@ -308,54 +310,9 @@
   <footer id="footer" class="white-bg">
     <p>Feito com <span class="heart">♥</span> por Arion Dantas</p>
   </footer>
+
+  <a href="#intro" class="back-to-top">❯</a>
+
 </body>
 
 </html>
-<!-- <section class="main-bg section" id="1">
-      <div class="main-content">
-        <h1>Testando</h1>
-        <h2>teste</h2>
-        <h3>teste</h3>
-        <h4>teste</h4>
-        <h5>teste</h5>
-        <h6>teste</h6>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium
-          tempore ullam dolores voluptatum dignissimos quam soluta minus
-          recusandae at corporis laudantium quos facilis pariatur earum neque,
-          amet error ut quasi!
-        </p>
-      </div>
-    </section>
-    <section class="white-bg section" id="2">
-      <div class="main-content">
-        <h1>Testando</h1>
-        <h2>teste</h2>
-        <h3>teste</h3>
-        <h4>teste</h4>
-        <h5>teste</h5>
-        <h6>teste</h6>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium
-          tempore ullam dolores voluptatum dignissimos quam soluta minus
-          recusandae at corporis laudantium quos facilis pariatur earum neque,
-          amet error ut quasi!
-        </p>
-      </div>
-    </section>
-    <section class="main-bg section">
-      <div class="main-content">
-        <h1>Testando</h1>
-        <h2>teste</h2>
-        <h3>teste</h3>
-        <h4>teste</h4>
-        <h5>teste</h5>
-        <h6>teste</h6>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium
-          tempore ullam dolores voluptatum dignissimos quam soluta minus
-          recusandae at corporis laudantium quos facilis pariatur earum neque,
-          amet error ut quasi!
-        </p>
-      </div>
-    </section> -->

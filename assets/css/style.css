@@ -389,4 +389,16 @@ tfoot td, thead th {
     .menu-spacing {
         display: none;
     }
+
+    h1 {
+        font-size: 4rem;
+        text-transform: uppercase;
+    }
+    
+    h2 {
+        text-transform: uppercase;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        line-height: 1;
+    }
 }   
